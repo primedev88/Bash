@@ -3,10 +3,11 @@
 //
 
 #pragma once
+#include "command.h"
 #include <string>
 #include <vector>
 
 class Parser {
 public:
-    static std::vector<char*> parse(const std::string& input);
+    static std::vector<Command> parse(const std::string& input);
 };

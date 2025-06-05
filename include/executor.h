@@ -3,9 +3,9 @@
 //
 
 #pragma once
-#include <vector>
+#include "command.h"
 
 class Executor {
 public:
-    static void execute(std::vector<char*>& args);
+    static void execute(const Command& cmd);
 };

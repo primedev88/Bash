@@ -13,7 +13,9 @@ void Shell::run() {
         std::getline(std::cin, input);
         if (input == "exit") break;
 
-        auto args = Parser::parse(input);
-        Executor::execute(args);
+        auto commands = Parser::parse(input);
+        for (auto& cmd : commands) {
+            Executor::execute(cmd);
+        }
     }
 }
